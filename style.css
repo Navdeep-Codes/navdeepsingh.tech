@@ -1,0 +1,211 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Container */
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  background: #f0f0f0;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background: #ddd;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  margin-left: 1rem;
+}
+
+.theme-toggle label {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.theme-toggle input {
+  margin-right: 0.25rem;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #fafafa;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Project cards */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 1rem;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e1e1e1;
+  transition: background 0.2s;
+}
+
+.card:hover {
+  background: #eee;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form button {
+  padding: 0.75rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+form button:hover {
+  background: #111;
+}
+
+/* Footer */
+footer {
+  background: #f0f0f0;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+}
+
+/* Mobile nav (burger toggle if needed) */
+#menu-toggle,
+.menu-icon {
+  display: none;
+}
+
+/* Dark mode with :has() — requires modern browser */
+body:has(#dark-toggle:checked) {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+body:has(#dark-toggle:checked) header,
+body:has(#dark-toggle:checked) footer {
+  background: #1e1e1e;
+}
+
+body:has(#dark-toggle:checked) nav a {
+  color: #ccc;
+}
+
+body:has(#dark-toggle:checked) nav a:hover {
+  background: #333;
+}
+
+body:has(#dark-toggle:checked) .hero {
+  background: #1a1a1a;
+}
+
+body:has(#dark-toggle:checked) .card {
+  background: #222;
+  border-color: #333;
+}
+
+body:has(#dark-toggle:checked) form input,
+body:has(#dark-toggle:checked) form textarea {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+body:has(#dark-toggle:checked) form button {
+  background: #555;
+}
+
+body:has(#dark-toggle:checked) form button:hover {
+  background: #333;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
