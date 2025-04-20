@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Blog</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+    <label for="theme-toggle" class="theme-toggle-label">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </label>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Dev<span>Portfolio</span></h1>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Blog</h1>
+            <p>Thoughts, tutorials, and insights on web development</p>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+        <div class="container">
+            <div class="category-filter">
+                <input type="radio" name="category" id="cat-all" checked>
+                <label for="cat-all" class="category-label">All</label>
+                
+                <input type="radio" name="category" id="cat-tutorials">
+                <label for="cat-tutorials" class="category-label">Tutorials</label>
+                
+                <input type="radio" name="category" id="cat-css">
+                <label for="cat-css" class="category-label">CSS Tricks</label>
+                
+                <input type="radio" name="category" id="cat-design">
+                <label for="cat-design" class="category-label">Design Tips</label>
+                
+                <input type="radio" name="category" id="cat-career">
+                <label for="cat-career" class="category-label">Career</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post">
+        <div class="container">
+            <div class="featured-post-card">
+                <div class="featured-post-image">
+                    <img src="img/blog/featured-post.jpg" alt="Featured Post">
+                    <span class="featured-tag">Featured</span>
+                </div>
+                <div class="featured-post-content">
+                    <div class="post-meta">
+                        <span class="post-category">CSS Tricks</span>
+                        <span class="post-date">April 10, 2025</span>
+                    </div>
+                    <h2>The Power of CSS Grid: Building Complex Layouts with Ease</h2>
+                    <p>Learn how to leverage the full potential of CSS Grid to create intricate, responsive layouts without relying on JavaScript or complex workarounds.</p>
+                    <p>In this comprehensive guide, we'll explore practical examples, best practices, and creative techniques to master this revolutionary layout system.</p>
+                    <div class="post-stats">
+                        <span><i class="far fa-clock"></i> 8 min read</span>
+                        <span><i class="far fa-comment"></i> 24 comments</span>
+                    </div>
+                    <a href="#" class="btn">Read Full Article</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-grid">
+        <div class="container">
+            <h2 class="section-title">Latest Articles</h2>
+            
+            <div class="blog-posts">
+                <!-- Post 1 -->
+                <div class="blog-card" data-category="tutorials">
+                    <div class="blog-image">
+                        <img src="img/blog/post1.jpg" alt="CSS Animations">
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span class="post-category">Tutorials</span>
+                            <span class="post-date">March 28, 2025</span>
+                        </div>
+                        <h3>Creating Smooth CSS Animations: A Step-by-Step Guide</h3>
+                        <p>Learn how to create engaging, performant animations using only CSS properties and techniques.</p>
+                        <div class="post-stats">
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="blog-card" data-category="css">
+                    <div class="blog-image">
+                        <img src="img/blog/post2.jpg" alt="CSS Variables">
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span class="post-category">CSS Tricks</span>
+                            <span class="post-date">March 15, 2025</span>
+                        </div>
+                        <h3>Leveraging CSS Variables for Dynamic Theming</h3>
+                        <p>Discover how to implement dark mode and custom color themes using CSS custom properties.</p>
+                        <div class="post-stats">
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Post 3 -->
+                <div class="blog-card" data-category="design">
+                    <div class="blog-image">
+                        <img src="img/blog/post3.jpg" alt="Typography">
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span class="post-category">Design Tips</span>
+                            <span class="post-date">February 28, 2025</span>
+                        </div>
+                        <h3>Typography Fundamentals: Choosing Fonts for Web Projects</h3>
+                        <p>An in-depth exploration of font selection, pairing, and implementation for better readability.</p>
+                        <div class="post-stats">
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Post 4 -->
+                <div class="blog-card" data-category="career">
+                    <div class="blog-image">
+                        <img src="img/blog/post4.jpg" alt="Frontend Career">
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span class="post-category">Career</span>
+                            <span class="post-date">February 15, 2025</span>
+                        </div>
+                        <h3>From Junior to Senior: Navigating Your Frontend Developer Career</h3>
+                        <p>Practical advice on skill development, portfolio building, and professional growth in web development.</p>
+                        <div class="post-stats">
+                            <span><i class="far fa-clock"></i> 9 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Post 5 -->
+                <div class="blog-card" data-category="tutorials">
+                    <div class="blog-image">
+                        <img src="img/blog/post5.jpg" alt="Flexbox Tutorial">
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span class="post-category">Tutorials</span>
+                            <span class="post-date">January 28, 2025</span>
+                        </div>
+                        <h3>Mastering CSS Flexbox: From Basics to Advanced Techniques</h3>
+                        <p>A comprehensive guide to Flexbox layout with practical examples and common use cases.</p>
+                        <div class="post-stats">
+                            <span><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Post 6 -->
+                <div class="blog-card" data-category="css">
+                    <div class="blog-image">
+                        <img src="img/blog/post6.jpg" alt="CSS Frameworks">
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span class="post-category">CSS Tricks</span>
+                            <span class="post-date">January 15, 2025</span>
+                        </div>
+                        <h3>CSS-Only Solutions for Common UI Patterns</h3>
+                        <p>Learn how to build interactive components like accordions, tabs, and modals without JavaScript.</p>
+                        <div class="post-stats">
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <span class="page-ellipsis">...</span>
+                <a href="#" class="page-link">8</a>
+                <a href="#" class="page-link next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to My Newsletter</h2>
+                <p>Get the latest articles, tutorials, and updates delivered straight to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+                <p class="newsletter-note">I respect your privacy. No spam, ever.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Dev<span>Portfolio</span></h2>
+                    <p>Creating digital experiences that leave an impression.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    
