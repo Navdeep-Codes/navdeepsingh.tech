@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Navdeep</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico">
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Dev<span>Portfolio</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header>
-  <div class="container">
-    <h1><a href="index.html">Navdeep</a></h1>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="theme-toggle">
-      <input type="checkbox" id="dark-toggle">
-      <label for="dark-toggle">Dark Mode</label>
-    </div>
-  </div>
-</header>
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <p>Let's create something amazing together!</p>
+        </div>
+    </section>
 
-  <section>
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section class="contact-form">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 Navdeep. All rights reserved.</p>
-  </div>
-</footer>
-
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 DevPortfolio. All rights reserved.</p>
+    </footer>
 </body>
 </html>
