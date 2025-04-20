@@ -1,41 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Navdeep</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | About</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <h1><a href="index.html">Navdeep</a></h1>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="theme-toggle">
-      <input type="checkbox" id="dark-toggle">
-      <label for="dark-toggle">Dark Mode</label>
-    </div>
-  </div>
-</header>
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+    <label for="theme-toggle" class="theme-toggle-label">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </label>
 
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Dev<span>Portfolio</span></h1>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section>
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I’m a passionate developer focused on design, interaction, and building meaningful user experiences — all without JavaScript in this portfolio!</p>
-    </div>
-  </section>
-<footer>
-  <div class="container">
-    <p>&copy; 2025 Navdeep. All rights reserved.</p>
-  </div>
-</footer>
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Learn more about my journey and passion for web development</p>
+        </div>
+    </section>
 
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="img/profile-full.jpg" alt="Navdeep's Profile Photo">
+                </div>
+                <div class="about-text">
+                    <h2>Who I Am</h2>
+                    <p>Hello! I'm Navdeep, a passionate web developer and designer with over 5 years of experience creating beautiful, functional websites and applications.</p>
+                    <p>I specialize in crafting responsive web experiences that combine clean code with stunning visual design. My approach focuses on user-centered design principles and accessibility.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or hiking in the great outdoors.</p>
+                    
+                    <div class="personal-info">
+                        <div class="info-item">
+                            <strong>Name:</strong> Navdeep Singh
+                        </div>
+                        <div class="info-item">
+                            <strong>Email:</strong> contact@navdeep.dev
+                        </div>
+                        <div class="info-item">
+                            <strong>Location:</strong> Toronto, Canada
+                        </div>
+                        <div class="info-item">
+                            <strong>Available for:</strong> Freelance & Full-time Opportunities
+                        </div>
+                    </div>
+                    
+                    <a href="contact.html" class="btn">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="timeline">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Senior Frontend Developer</h3>
+                        <h4>TechCorp Solutions</h4>
+                        <p>Leading frontend development for enterprise applications, mentoring junior developers, and implementing modern web standards.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>Frontend Developer</h3>
+                        <h4>WebVision Agency</h4>
+                        <p>Built responsive websites for various clients across industries using modern HTML, CSS, and JavaScript frameworks.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>UI/UX Designer</h3>
+                        <h4>CreativeDigital Studio</h4>
+                        <p>Designed user interfaces and experiences for web and mobile applications, collaborating with development teams to implement designs.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2019 - 2021</div>
+                    <div class="timeline-content">
+                        <h3>Web Design Intern</h3>
+                        <h4>StartupLabs</h4>
+                        <p>Assisted in designing and developing websites for tech startups, focusing on responsive layouts and modern design principles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Bachelor of Science</h3>
+                    <h4>Computer Science</h4>
+                    <p>University of Technology</p>
+                    <p>2015 - 2019</p>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certification</h3>
+                    <h4>Advanced Web Development</h4>
+                    <p>Tech Academy</p>
+                    <p>2020</p>
+                </div>
+                
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Certification</h3>
+                    <h4>UI/UX Design Fundamentals</h4>
+                    <p>Design Institute</p>
+                    <p>2021</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Dev<span>Portfolio</span></h2>
+                    <p>Creating digital experiences that leave an impression.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevPortfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
