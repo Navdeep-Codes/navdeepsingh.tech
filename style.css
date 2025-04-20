@@ -1,211 +1,200 @@
-/* Reset & base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --bg: #f0f0f0;
+  --text: #111;
+  --accent: #6200ea;
+  --card-bg: #fff;
 }
-
-html {
-  scroll-behavior: smooth;
+body:has(#dark-toggle:checked) {
+  --bg: #111;
+  --text: #eee;
+  --accent: #bb86fc;
+  --card-bg: #1e1e1e;
 }
-
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: white;
-  color: black;
-  line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s;
 }
-
-/* Container */
-.container {
-  max-width: 960px;
-  margin: auto;
-  padding: 1rem;
-}
-
-/* Header */
 header {
-  background: #f0f0f0;
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
-}
-
-header .container {
+  position: sticky;
+  top: 0;
+  background: var(--card-bg);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  z-index: 99;
 }
-
-header h1 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
 nav a {
+  margin: 0 1rem;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-
-nav a:hover {
-  background: #ddd;
-}
-
-/* Theme toggle */
-.theme-toggle {
-  margin-left: 1rem;
-}
-
-.theme-toggle label {
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.theme-toggle input {
-  margin-right: 0.25rem;
-}
-
-/* Hero section */
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: #fafafa;
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
-
-/* Project cards */
-.grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin-top: 1rem;
-}
-
-.card {
-  background: #f9f9f9;
-  padding: 1rem;
-  border-radius: 8px;
-  border: 1px solid #e1e1e1;
-  transition: background 0.2s;
-}
-
-.card:hover {
-  background: #eee;
-}
-
-/* Form */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 1rem;
-}
-
-form input,
-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-form button {
-  padding: 0.75rem;
-  background: #333;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  color: var(--text);
   font-weight: bold;
-  transition: background 0.2s;
 }
-
-form button:hover {
-  background: #111;
+nav a:hover {
+  color: var(--accent);
 }
-
-/* Footer */
-footer {
-  background: #f0f0f0;
-  padding: 1rem;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  margin-top: 2rem;
-}
-
-/* Mobile nav (burger toggle if needed) */
-#menu-toggle,
-.menu-icon {
+#dark-toggle {
   display: none;
 }
-
-/* Dark mode with :has() — requires modern browser */
-body:has(#dark-toggle:checked) {
-  background: #121212;
-  color: #f0f0f0;
+.toggle-label {
+  cursor: pointer;
+  background: var(--accent);
+  padding: 0.4rem 1rem;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
 }
-
-body:has(#dark-toggle:checked) header,
-body:has(#dark-toggle:checked) footer {
-  background: #1e1e1e;
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
 }
-
-body:has(#dark-toggle:checked) nav a {
-  color: #ccc;
+section {
+  margin-bottom: 4rem;
 }
-
-body:has(#dark-toggle:checked) nav a:hover {
-  background: #333;
+h1, h2 {
+  color: var(--accent);
 }
-
-body:has(#dark-toggle:checked) .hero {
-  background: #1a1a1a;
+.card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
 }
-
-body:has(#dark-toggle:checked) .card {
-  background: #222;
-  border-color: #333;
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #5ee7df, #b490ca);
+  background-size: 300% 300%;
+  animation: borderGradient 6s ease infinite;
+  z-index: -1;
+  border-radius: 1.2rem;
 }
-
-body:has(#dark-toggle:checked) form input,
-body:has(#dark-toggle:checked) form textarea {
-  background: #1e1e1e;
-  color: #f0f0f0;
-  border-color: #444;
+@keyframes borderGradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
 }
-
-body:has(#dark-toggle:checked) form button {
-  background: #555;
+.portfolio-img img {
+  width: 100%;
+  border-radius: 1rem;
+  transition: transform 0.4s ease;
 }
-
-body:has(#dark-toggle:checked) form button:hover {
-  background: #333;
+.portfolio-img:hover img {
+  transform: scale(1.05);
 }
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-  }
+.faq a {
+  display: block;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  color: var(--accent);
+}
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.answer:target {
+  max-height: 200px;
+}
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--accent);
+  white-space: nowrap;
+  animation: typing 3s steps(30), blink 0.7s infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: var(--accent) }
+}
+.flip-card {
+  perspective: 1000px;
+}
+.flip-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-front, .flip-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: var(--card-bg);
+  color: var(--text);
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+.tabs input {
+  display: none;
+}
+.tab-labels label {
+  cursor: pointer;
+  margin-right: 1rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+.tab-content {
+  display: none;
+  margin-top: 1rem;
+}
+#tab1:checked ~ .tab-content#skills,
+#tab2:checked ~ .tab-content#experience,
+#tab3:checked ~ .tab-content#education {
+  display: block;
+}
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  position: relative;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 4px;
+  background: var(--accent);
+  left: 0;
+  right: 0;
+}
+.step {
+  background: var(--bg);
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 2rem;
+  z-index: 1;
+}
+.konami-egg {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: var(--accent);
+  color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+#konami-toggle:checked ~ .konami-egg {
+  max-height: 200px;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--card-bg);
+  color: var(--text);
 }
