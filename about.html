@@ -1,303 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Navdeep's Pixel Portfolio</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Navdeep</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-        </label>
-        <em>Toggle Mode</em>
+<header>
+  <div class="container">
+    <h1><a href="index.html">Navdeep</a></h1>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <section>
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I’m a passionate developer focused on design, interaction, and building meaningful user experiences — all without JavaScript in this portfolio!</p>
     </div>
-
-    <header>
-        <div class="logo">
-            <h1>Navdeep<span class="accent">.dev</span></h1>
-        </div>
-        <nav>
-            <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="page-hero pixel-hero">
-        <div class="container">
-            <h1 class="glitch" data-text="ABOUT ME">ABOUT ME</h1>
-            <p class="pixel-text">The person behind the pixels</p>
-            <div class="pixel-decorations"></div>
-        </div>
-    </section>
-
-    <section class="about-content">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-image">
-                    <img src="assets/images/profile-photo.jpg" alt="Navdeep Profile Photo" class="pixel-frame">
-                    <div class="pixel-decorations"></div>
-                </div>
-                <div class="about-text">
-                    <h2 class="section-title">Hi, I'm Navdeep</h2>
-                    <p class="pixel-text-large">I'm a digital artist and developer specializing in creating pixel art with anime aesthetics.</p>
-                    <p>My journey began with a fascination for Japanese animation and pixel art styles, which I've combined into my own unique visual language. I believe in the power of visual storytelling and creating experiences that resonate on both emotional and aesthetic levels.</p>
-                    <p>I've collaborated with animation studios, indie developers, and brands looking to stand out with distinctive visual styles. My approach blends traditional pixel techniques with modern design principles to create work that feels both nostalgic and contemporary.</p>
-                    
-                    <div class="interests">
-                        <h3 class="pixel-subtitle">My Interests</h3>
-                        <div class="interest-tags">
-                            <span class="tag">Anime</span>
-                            <span class="tag">Pixel Art</span>
-                            <span class="tag">Digital Illustration</span>
-                            <span class="tag">Animation</span>
-                            <span class="tag">UI Design</span>
-                            <span class="tag">Japanese Culture</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="education-experience">
-        <div class="container">
-            <h2 class="section-title">My Journey</h2>
-            <div class="timeline pixel-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Lead Artist</h3>
-                        <h4>PixelVerse Studio</h4>
-                        <p>Leading a team of digital artists creating anime-styled pixel art for various media projects.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2023 - 2025</div>
-                    <div class="timeline-content">
-                        <h3>Digital Art Director</h3>
-                        <h4>Anime Wave Media</h4>
-                        <p>Directed visual development for animation projects and created signature pixel art styles.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021 - 2023</div>
-                    <div class="timeline-content">
-                        <h3>Master's in Digital Arts</h3>
-                        <h4>Tokyo Digital Arts Academy</h4>
-                        <p>Specialized in animation and pixel art with focus on Japanese visual aesthetics.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2017 - 2021</div>
-                    <div class="timeline-content">
-                        <h3>Bachelor's in Graphic Design</h3>
-                        <h4>Creative Arts University</h4>
-                        <p>Graduated with honors, focused on digital illustration and animation.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="skills-section">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category pixel-card">
-                    <h3 class="pixel-subtitle">Pixel Art</h3>
-                    <div class="skill-bar">
-                        <span class="skill-name">Character Design</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 95%">95%</div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <span class="skill-name">Environment Design</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%">90%</div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <span class="skill-name">Animation</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%">85%</div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <span class="skill-name">Isometric Art</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%">80%</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category pixel-card">
-                    <h3 class="pixel-subtitle">Design</h3>
-                    <div class="skill-bar">
-                        <span class="skill-name">UI/UX Design</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%">85%</div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <span class="skill-name">Color Theory</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%">90%</div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <span class="skill-name">Typography</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 75%">75%</div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <span class="skill-name">Branding</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%">80%</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category pixel-card">
-                    <h3 class="pixel-subtitle">Technical</h3>
-                    <div class="skill-bar">
-                        <span class="skill-name">Aseprite</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 95%">95%</div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <span class="skill-name">Adobe Suite</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%">90%</div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <span class="skill-name">HTML/CSS</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%">80%</div>
-                        </div>
-                    </div>
-                    <div class="skill-bar">
-                        <span class="skill-name">JavaScript Animation</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 75%">75%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-intro pixel-text-large">Interested in working together? Let's create something amazing!</p>
-            
-            <div class="contact-grid">
-                <div class="contact-info pixel-card">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope pixel-icon"></i>
-                        <div>
-                            <h3 class="pixel-subtitle">Email</h3>
-                            <p>hello@navdeep.dev</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt pixel-icon"></i>
-                        <div>
-                            <h3 class="pixel-subtitle">Location</h3>
-                            <p>Tokyo, Japan</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-share-alt pixel-icon"></i>
-                        <div>
-                            <h3 class="pixel-subtitle">Social</h3>
-                            <div class="social-links">
-                                <a href="#" class="pixel-icon"><i class="fab fa-github"></i></a>
-                                <a href="#" class="pixel-icon"><i class="fab fa-artstation"></i></a>
-                                <a href="#" class="pixel-icon"><i class="fab fa-twitter"></i></a>
-                                <a href="#" class="pixel-icon"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form pixel-card">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required class="pixel-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Your email" required class="pixel-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required class="pixel-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Your message" rows="5" required class="pixel-input"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-submit pixel-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="pixel-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 class="pixel-subtitle">Navdeep<span class="accent">.dev</span></h3>
-                <p>Pixel art + Anime aesthetics = Digital magic</p>
-            </div>
-            <div class="footer-section">
-                <h3 class="pixel-subtitle">Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3 class="pixel-subtitle">Connect</h3>
-                <div class="social-links">
-                    <a href="#" class="pixel-icon"><i class="fab fa-github"></i></a>
-                    <a href="#" class="pixel-icon"><i class="fab fa-artstation"></i></a>
-                    <a href="#" class="pixel-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="pixel-icon"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2025 Navdeep. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <button id="scroll-to-top" title="Go to top" class="pixel-btn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+  </section>
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Navdeep. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
