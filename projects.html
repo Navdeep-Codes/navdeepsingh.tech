@@ -1,52 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects - Navdeep</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Theme Toggle -->
+    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+    <label for="theme-toggle" class="theme-toggle-label">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </label>
 
-<header>
-  <div class="container">
-    <h1><a href="index.html">Navdeep</a></h1>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="theme-toggle">
-      <input type="checkbox" id="dark-toggle">
-      <label for="dark-toggle">Dark Mode</label>
-    </div>
-  </div>
-</header>
-
-
-  <section>
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Project One</h3>
-          <p>Brief description of the project.</p>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Dev<span>Portfolio</span></h1>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="card">
-          <h3>Project Two</h3>
-          <p>Another cool project using HTML and CSS only.</p>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>A selection of my latest and favorite web development projects</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 Navdeep. All rights reserved.</p>
-  </div>
-</footer>
+    <!-- Project Filters -->
+    <section class="project-filters">
+        <div class="container">
+            <div class="filter-tabs">
+                <input type="radio" name="filter" id="all" checked>
+                <label for="all" class="filter-tab">All</label>
+                
+                <input type="radio" name="filter" id="web">
+                <label for="web" class="filter-tab">Web Development</label>
+                
+                <input type="radio" name="filter" id="ui">
+                <label for="ui" class="filter-tab">UI Design</label>
+                
+                <input type="radio" name="filter" id="app">
+                <label for="app" class="filter-tab">Apps</label>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid full">
+                <!-- Project 1 -->
+                <div class="project-card" id="project1" data-category="web">
+                    <div class="project-image">
+                        <img src="img/project-images/project1.jpg" alt="E-commerce Website">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-commerce Website</h3>
+                        <p>A fully responsive e-commerce platform with modern design and intuitive user experience.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" id="project2" data-category="ui">
+                    <div class="project-image">
+                        <img src="img/project-images/project2.jpg" alt="Portfolio Template">
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio Template</h3>
+                        <p>Customizable portfolio template designed for creative professionals and agencies.</p>
+                        <div class="project-tags">
+                            <span class="tag">UI Design</span>
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">Flexbox</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="img/project-images/project3.jpg" alt="Recipe App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Recipe Finder App</h3>
+                        <p>A web application that helps users discover new recipes based on available ingredients.</p>
+                        <div class="project-tags">
+                            <span class="tag">CSS Variables</span>
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">Mobile-First</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="img/project-images/project4.jpg" alt="Travel Blog">
+                    </div>
+                    <div class="project-info">
+                        <h3>Travel Blog</h3>
+                        <p>Responsive travel blog with modern design and content management system.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="ui">
+                    <div class="project-image">
+                        <img src="img/project-images/project5.jpg" alt="Dashboard UI">
+                    </div>
+                    <div class="project-info">
+                        <h3>Dashboard UI Design</h3>
+                        <p>Clean and modern dashboard interface design for analytics platform.</p>
+                        <div class="project-tags">
+                            <span class="tag">UI Design</span>
+                            <span class="tag">CSS Grid</span>
+                            <span class="tag">Accessibility</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="app">
+                    <div class="project-image">
+                        <img src="img/project-images/project6.jpg" alt="Weather App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Forecast App</h3>
+                        <p>Clean weather application with intuitive interface and visual representations.</p>
+                        <div class="project-tags">
+                            <span class="tag">CSS Variables</span>
+                            <span class="tag">Responsive</span>
+                            <span class="tag">Mobile-First</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">Live Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section class="project-showcase">
+        <div class="container">
+            <h2 class="section-title">Featured Project</h2>
+            <div class="showcase-content">
+                <div class="showcase-image">
+                    <img src="img/project-images/featured-project.jpg" alt="Featured Project">
+                </div>
+                <div class="showcase-info">
+                    <h3>Financial Dashboard Redesign</h3>
+                    <p>A complete redesign of a financial services dashboard, focusing on improved user experience and accessibility.</p>
+                    <p>This project included user research, wireframing, prototyping, and the final implementation with HTML and CSS.</p>
+                    <ul class="showcase-features">
+                        <li><i class="fas fa-check"></i> Responsive across all devices</li>
+                        <li><i class="fas fa-check"></i> WCAG 2.1 AA compliant</li>
+                        <li><i class="fas fa-check"></i> 40% increase in user engagement</li>
+                        <li><i class="fas fa-check"></i> Print-friendly version included</li>
+                    </ul>
+                    <div class="showcase-links">
+                        <a href="#" class="btn">View Live Project</a>
+                        <a href="#" class="btn btn-outline">Read Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Have a project in mind?</h2>
+            <p>Let's bring your idea to life with clean code and beautiful design.</p>
+            <a href="contact.html" class="btn btn-large">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Dev<span>Portfolio</span></h2>
+                    <p>Creating digital experiences that leave an impression.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="skills.html">Skills</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevPortfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
