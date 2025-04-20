@@ -1,229 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Navdeep's Pixel Portfolio</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Navdeep</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Dark Mode Toggle -->
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-        </label>
-        <em>Toggle Mode</em>
+
+<header>
+  <div class="container">
+    <h1><a href="index.html">Navdeep</a></h1>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <section>
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Project One</h3>
+          <p>Brief description of the project.</p>
+        </div>
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>Another cool project using HTML and CSS only.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Header with Navigation -->
-    <header>
-        <div class="logo">
-            <h1>Navdeep<span class="accent">.dev</span></h1>
-        </div>
-        <nav>
-            <div class="hamburger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="main.html">Home</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </nav>
-    </header>
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Navdeep. All rights reserved.</p>
+  </div>
+</footer>
 
-    <!-- Projects Hero Section -->
-    <section class="page-hero pixel-hero">
-        <div class="container">
-            <h1 class="glitch" data-text="PROJECTS">PROJECTS</h1>
-            <p class="pixel-text">Explore my world of pixel art and anime aesthetics</p>
-            <div class="pixel-decorations"></div>
-        </div>
-    </section>
-
-    <!-- Project Filters -->
-    <section class="project-filters">
-        <div class="container">
-            <div class="filters">
-                <button class="filter-btn pixel-btn active" data-filter="all">All</button>
-                <button class="filter-btn pixel-btn" data-filter="pixel">Pixel Art</button>
-                <button class="filter-btn pixel-btn" data-filter="anime">Anime Style</button>
-                <button class="filter-btn pixel-btn" data-filter="ui">UI Design</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Gallery -->
-    <section class="projects-gallery">
-        <div class="container">
-            <div class="gallery">
-                <!-- Project 1 -->
-                <div class="project-item anime pixel-card" id="project1">
-                    <div class="project-img">
-                        <img src="assets/images/project1.jpg" alt="Anime Character Design">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="pixel-subtitle">Anime Character Design</h3>
-                        <p>Original character designs with pixel art aesthetics for a web series. Created with a blend of traditional anime styling and modern pixel techniques.</p>
-                        <div class="tech-stack">
-                            <span class="tech">Aseprite</span>
-                            <span class="tech">Procreate</span>
-                            <span class="tech">Character Design</span>
-                            <span class="tech">Animation</span>
-                        </div>
-                        <a href="#" class="btn pixel-btn">View Gallery</a>
-                        <a href="#" class="btn btn-outline pixel-btn">Process</a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-item ui" id="project2">
-                    <div class="project-img">
-                        <img src="assets/images/project2.jpg" alt="Pixel Art UI Kit">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="pixel-subtitle">Pixel Art UI Kit</h3>
-                        <p>A comprehensive UI kit featuring pixel art elements for modern applications. Includes buttons, icons, menus and animated elements.</p>
-                        <div class="tech-stack">
-                            <span class="tech">Aseprite</span>
-                            <span class="tech">Figma</span>
-                            <span class="tech">UI Design</span>
-                            <span class="tech">Animation</span>
-                        </div>
-                        <a href="#" class="btn pixel-btn">Live Demo</a>
-                        <a href="#" class="btn btn-outline pixel-btn">UI Kit</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-item anime" id="project3">
-                    <div class="project-img">
-                        <img src="assets/images/project3.jpg" alt="Anime-Inspired Website">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="pixel-subtitle">Anime-Inspired Website</h3>
-                        <p>Full responsive website design with anime aesthetics and modern functionality, featuring custom illustrations and subtle animations.</p>
-                        <div class="tech-stack">
-                            <span class="tech">HTML/CSS</span>
-                            <span class="tech">JavaScript</span>
-                            <span class="tech">GSAP Animation</span>
-                            <span class="tech">Responsive Design</span>
-                        </div>
-                        <a href="#" class="btn pixel-btn">Live Demo</a>
-                        <a href="#" class="btn btn-outline pixel-btn">Case Study</a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-item pixel">
-                    <div class="project-img">
-                        <img src="assets/images/project4.jpg" alt="Pixel Art Animation Series">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="pixel-subtitle">Pixel Art Animation Series</h3>
-                        <p>A collection of looping animations created with pixel art techniques, showcasing scenes from urban Japanese settings.</p>
-                        <div class="tech-stack">
-                            <span class="tech">Aseprite</span>
-                            <span class="tech">After Effects</span>
-                            <span class="tech">Animation</span>
-                            <span class="tech">Pixel Art</span>
-                        </div>
-                        <a href="#" class="btn pixel-btn">View Project</a>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-item ui">
-                    <div class="project-img">
-                        <img src="assets/images/project5.jpg" alt="Neo-Tokyo App Design">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="pixel-subtitle">Neo-Tokyo App Design</h3>
-                        <p>Mobile app UI/UX design inspired by futuristic anime aesthetics, with a focus on user experience and visual impact.</p>
-                        <div class="tech-stack">
-                            <span class="tech">Figma</span>
-                            <span class="tech">Prototyping</span>
-                            <span class="tech">UI/UX Design</span>
-                            <span class="tech">Animation</span>
-                        </div>
-                        <a href="#" class="btn pixel-btn">View Case Study</a>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-item pixel">
-                    <div class="project-img">
-                        <img src="assets/images/project6.jpg" alt="Isometric Pixel Art">
-                    </div>
-                    <div class="project-info">
-                        <h3 class="pixel-subtitle">Isometric Pixel Art</h3>
-                        <p>Series of isometric pixel art scenes depicting futuristic cityscapes with anime-inspired characters and architecture.</p>
-                        <div class="tech-stack">
-                            <span class="tech">Aseprite</span>
-                            <span class="tech">Illustration</span>
-                            <span class="tech">Isometric Design</span>
-                            <span class="tech">Digital Art</span>
-                        </div>
-                        <a href="#" class="btn pixel-btn">View Gallery</a>
-                        <a href="#" class="btn btn-outline pixel-btn">Process</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta-section pixel-cta">
-        <div class="container">
-            <h2 class="glitch" data-text="WORK WITH ME">WORK WITH ME</h2>
-            <p>Let's collaborate and bring your pixel & anime-inspired visions to life!</p>
-            <a href="about.html#contact" class="cta-button pixel-btn">Get In Touch</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="pixel-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 class="pixel-subtitle">Navdeep<span class="accent">.dev</span></h3>
-                <p>Pixel art + Anime aesthetics = Digital magic</p>
-            </div>
-            <div class="footer-section">
-                <h3 class="pixel-subtitle">Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3 class="pixel-subtitle">Connect</h3>
-                <div class="social-links">
-                    <a href="#" class="pixel-icon"><i class="fab fa-github"></i></a>
-                    <a href="#" class="pixel-icon"><i class="fab fa-artstation"></i></a>
-                    <a href="#" class="pixel-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="pixel-icon"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2025 Navdeep. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" title="Go to top" class="pixel-btn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
